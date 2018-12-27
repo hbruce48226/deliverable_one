@@ -1,0 +1,222 @@
+/***********Mobile First***********/
+
+/*clearing any inherit styling and padding in the ul*/
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+/*initializing some basic info for the webpage*/
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600, 300, 400;
+    background-color: #F0ECEE;
+    padding-right: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/*now, starting with the Flexbox layout of the top navigation bar:*/
+
+/*makes "Adopt Me" bigger and preserves color of "Adopt"*/
+/*ensures 1.25em on both Desktop and Mobile*/
+/*creates space where needed*/
+.adopt-me {
+    font-size: 1.75em !important;
+    color: inherit !important;
+    padding-bottom: 24px;
+    margin-top: 18px;
+    margin-bottom: -1px;
+}
+
+/*ensures that all the list items will be pushed to the left */
+.nav-bar > li {
+    text-align: left;
+    color: #88898B;
+    line-height: 27px;
+    font-size: 1.35em;
+}
+
+/*ensures the order of the nav-bar contents are in a column instead of a row*/
+.nav-bar {
+    flex-direction: column;
+}
+
+.our-buddies {
+    padding-bottom: 18px;
+}
+
+/*turning "Me" and "adopting" red*/
+.me, .adopting {
+    color: #FF4850;
+}
+
+/**//**//**//**//**/
+/*Text section*//**/
+/**//**//**//**//**/
+.text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.header {
+    font-weight: bolder;
+    line-height: 57px;
+    padding: 0;
+    margin: 0;
+    font-size: 2.3em;
+}
+
+.paragraph {
+    color: #88898B;
+    line-height: 15px;
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+/*Changing button style*/
+button {
+    display: flex;
+    background-color: #FF4850;
+    color: white;
+    padding: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.35em;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.contact-us button {
+    font-size: 1em;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//***********Desktop***********//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+/*starting with the Flexbox layout of the top bar*/
+@media screen and (min-width:768px) {
+    body {
+        background-image: url(images/bulldog.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        margin-left: 57px;
+        margin-right: 55px;
+    }
+
+    /*creates space between list items*/
+    .nav-bar > li {
+        padding: 10px;
+        font-size: 1.1em;
+    }
+
+    /*changes nav-bar layout to row and aligns items along their center*/
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+    }
+
+    .adopt-me {
+    /*    justify-content: flex-end;*/
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 1.5em !important;
+    }
+
+    /*pushes Adopt Me over to the left*/
+    .about-us {
+        margin-left: auto;
+    }
+
+    /*changes button from 100% to auto*/
+    button {
+        width: auto;
+    }
+
+    .contact-us button{
+        margin: 0;
+        font-family: 'Fira Sans', sans-serif;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    .text {
+        width: 40%;
+        vertical-align: middle;
+        font-size: .82em;
+        margin-top: 140px;
+    }
+    
+    .header {
+        flex: 1 100%;
+        line-height: 40px;
+    }
+
+    .paragraph {
+        flex: 1 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 25px;
+        font-size: 1.4em;
+    }
+
+    .find-out-how {
+        font-size: 1.5em;
+        padding-left: 46px;
+        padding-right: 46px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    /*navigation text hover color*/
+    li:hover {
+        color: #FF4850;
+    }
+
+    /*button text hover color*/
+     button:hover {
+        background-color: #CCC;
+        color: #FF4850;        
+    }
+}
